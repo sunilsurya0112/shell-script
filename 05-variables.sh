@@ -1,5 +1,5 @@
 #!/bin/bash
 
-read -s Username
+read -s USERNAME
 
-echo "USERNAME is $Username"
+echo "Username is $USERNAME"
