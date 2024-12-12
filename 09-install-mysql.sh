@@ -9,4 +9,4 @@ else
     echo "you are root user"    
 fi    
 
-apt-get install mysql-server -y
+apt-get install git -y
