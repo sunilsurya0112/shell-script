@@ -10,7 +10,7 @@ else
     echo "you are root user"    
 fi    
 
-apt-get install mysql -y
+apt install git -y
 
 if [ $? -ne 0 ]
 then    
@@ -18,4 +18,15 @@ then
     exit 1 #other than zero
 else
     echo "installing Git is Success"
+fi        
+
+
+apt install mysql-server -y
+
+if [ $? -ne 0 ]
+then    
+    echo "Error: Installing mysql is failed"
+    exit 1 #other than zero
+else
+    echo "installing mysql is Success"
 fi        
