@@ -28,10 +28,10 @@ else
     echo "You are root user"
 fi # fi means reverse of if, indicating condition end
 
-yum install mysql -y &>> $LOGFILE
+apt install mysql-server -y &>> $LOGFILE
 
-VALIDATE $? "Installing MySQL"
+VALIDATE $? "Installing  MySQL"
 
-yum install git -y &>> $LOGFILE
+apt install git -y &>> $LOGFILE
 
 VALIDATE $? "Installing GIT"
