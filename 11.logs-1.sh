@@ -32,6 +32,6 @@ apt install mysql-server -y &>> $LOGFILE
 
 VALIDATE $? "Installing  MySQL"
 
-apt install git -y &>> $LOGFILE
+apt install git -y &>>$LOGFILE
 
 VALIDATE $? "Installing GIT"
