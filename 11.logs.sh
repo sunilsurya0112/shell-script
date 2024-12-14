@@ -5,7 +5,7 @@ ID=$(id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
-LOG_FILE="/tmp/$0-$TIMESTAMP.log
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "script name is: $0"
 
@@ -36,4 +36,3 @@ VALIDATE $? "Mysql installation"
 apt install git -y &>> $LOGFILE
 
 VALIDATE $? "git installation"
-
