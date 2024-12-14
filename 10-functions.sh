@@ -4,18 +4,18 @@
 ID=$(id -u)
 
 VALIDATE(){
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
     then    
-        echo "Error: Installing git is failed"
+        echo "$2 is failed"
         exit 1 #other than zero
     else
-        echo "installing Git is Success"
+        echo "$1 is Success"
     fi     
 
 }
 
 
-if [ $ID -ne 0 ]
+if [ $1 -ne 0 ]
 then
     echo "you are not root user"
     exit 34
@@ -25,9 +25,9 @@ fi # fi means reverse of if , indicating condition end
 
 apt install mysql-server -y
 
-VALIDATE
+VALIDATE $? "Mysql installation"
 
 apt install git -y
 
-VALIDATE
+VALIDATE $? "git installation"
 
