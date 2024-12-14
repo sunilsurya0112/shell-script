@@ -10,7 +10,7 @@ else
     echo "you are root user"    
 fi    
 
-apt-get install gitjj -y
+apt-get install mysql -y
 
 if [ $? -ne 0 ]
 then    
