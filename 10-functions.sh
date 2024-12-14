@@ -9,7 +9,7 @@ VALIDATE(){
         echo "$2 is failed"
         exit 1 #other than zero
     else
-        echo "$1 is Success"
+        echo "$2 is Success"
     fi     
 
 }
