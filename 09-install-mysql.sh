@@ -10,7 +10,7 @@ else
     echo "you are root user"    
 fi    
 
-apt-get install git -y
+apt-get install gitjj -y
 
 if [ $? -ne 0 ]
 then    
