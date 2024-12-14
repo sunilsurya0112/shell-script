@@ -7,8 +7,6 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo "script name is: $0"
-
 VALIDATE(){
     if [ $1 -ne 0 ]
     then    
