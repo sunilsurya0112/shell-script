@@ -33,4 +33,4 @@ VALIDATE $? "Mysql installation"
 
 apt install git -y &>> $LOGFILE
 
-VALIDATE $? "git installation"
+VALIDATE $? "git installation" 
