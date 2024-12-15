@@ -1,40 +1,37 @@
 #!/bin/bash
 
-
 ID=$(id -u)
-
 TIMESTAMP=$(date +%F-%H-%M-%S)
-
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
+echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
+
 VALIDATE(){
     if [ $1 -ne 0 ]
-    then    
-        echo "$2 is $R failed $N"
-        exit 1 #other than zero
+    then
+        echo -e "ERROR:: $2 ... $R FAILED $N"
+        exit 1
     else
-        echo "$2 is $G Success $N"
-    fi     
-
+        echo -e "$2 ... $G SUCCESS $N"
+    fi
 }
-
 
 if [ $ID -ne 0 ]
 then
-    echo "you are not root user"
-    exit 34
+    echo -e "$R ERROR:: Please run this script with root access $N"
+    exit 1 # you can give other than 0
 else
-    echo "you are root user"    
-fi # fi means reverse of if , indicating condition end
+    echo "You are root user"
+fi # fi means reverse of if, indicating condition end
 
-apt-get install mysql-server -y >> $LOGFILE
+apt-get install mysql-server -y &>> $LOGFILE
 
-VALIDATE $? "Mysql installation"
+VALIDATE $? "Installing MySQL"
 
-apt-get install git -y >> $LOGFILE
+apt-get install git -y &>> $LOGFILE
 
-VALIDATE $? "git installation" 
+VALIDATE $? "Installing GIT"
