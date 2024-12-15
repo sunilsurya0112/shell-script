@@ -37,7 +37,7 @@ fi
 # package=git for first time
 for package in $@
   do  
-    apt-get list installed $package &>> $LOGFILE
+    apt list installed $package &>> $LOGFILE
     if [ $? -ne 0 ]
     then
         apt-get install $package -y &>> $LOGFILE
