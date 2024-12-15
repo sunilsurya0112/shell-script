@@ -38,7 +38,7 @@ fi
 for package in $@
   do  
     apt-get installed $package &>> $LOGFILE
-    if [$? -ne  0]
+    if [ $? -ne 0 ]
     then
         apt-get install $package -y &>> $LOGFILE
         VALIDATE $? "Installation of $package"
