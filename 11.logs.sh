@@ -26,7 +26,7 @@ VALIDATE(){
 if [ $ID -ne 0 ]
 then
     echo "you are not root user"
-    exit 34
+    #exit 34
 else
     echo "you are root user"    
 fi # fi means reverse of if , indicating condition end
