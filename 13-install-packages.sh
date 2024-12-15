@@ -8,7 +8,7 @@ Y="\e[m33"
 N="\e[m0"
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOGFILE = "/tmp/$0-$TIMESTAMP.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "script started executing at $TIMESTAMP" &>> $LOGFILE
 
