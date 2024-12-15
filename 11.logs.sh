@@ -9,7 +9,7 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
-LOGFILE="/home/sunil/$0-$TIMESTAMP.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
