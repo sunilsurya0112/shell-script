@@ -7,8 +7,8 @@ G="\e[m32"
 Y="\e[m33"
 N="\e[m0"
 
-LOGFILE = "/tmp/$0-$TIMESTAMP.log"
 TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE = "/tmp/$0-$TIMESTAMP.log"
 
 echo "script started executing at $TIMESTAMP" &>> $LOGFILE
 
@@ -32,7 +32,9 @@ then
 else
     echo -e "$G you are root user"
 fi
-
+#echo "All arguments passed: $@"
+# git mysql postfix net-tools
+# package=git for first time
 for package in $@
   do  
     apt-get installed $package &>> $LOGFILE
