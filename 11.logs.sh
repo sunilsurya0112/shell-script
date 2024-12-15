@@ -15,7 +15,7 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then    
         echo "$2 is $R failed $N"
-        #exit 1 #other than zero
+        exit 1 #other than zero
     else
         echo "$2 is $G Success $N"
     fi     
