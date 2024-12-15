@@ -2,10 +2,10 @@
 
 ID=$(id -u)
 
-R="\e[m31"
-G="\e[m32"
-Y="\e[m33"
-N="\e[m0"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
@@ -27,7 +27,7 @@ VALIDATE(){
 if [ $ID -ne 0 ]
 then 
     echo -e " $R you are not root user"
-    exit 32
+    exit 1
 
 else
     echo -e "$G you are root user"
