@@ -6,7 +6,7 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
-LOGFILE="/home/sunil/shell-script/$0-$TIMESTAMP.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 
@@ -30,8 +30,8 @@ fi # fi means reverse of if, indicating condition end
 
 apt install mysql-server -y &>> $LOGFILE
 
-VALIDATE $? "Installing  MySQL"
+VALIDATE $? "Installing MySQL"
 
-apt install git -y >> $LOGFILE
+apt install git -y &>> $LOGFILE
 
 VALIDATE $? "Installing GIT"
