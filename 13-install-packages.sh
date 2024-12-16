@@ -15,9 +15,9 @@ echo "script started executing at $TIMESTAMP" &>> $LOGFILE
 VALIDATE(){
        if [ $1 -ne 0 ]
         then 
-                 echo -e "$2 $N ..is $R FAILED"
+                 echo -e "$2 ..is $R FAILED$N"
         else 
-                 echo -e "$2 $N  .. is $G SUCCESS"
+                 echo -e "$2  .. is $G SUCCESS$N"
        fi 
 
 
