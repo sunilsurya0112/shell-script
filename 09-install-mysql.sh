@@ -10,7 +10,7 @@ else
     echo "you are root user"    
 fi    
 
-apt install git -y
+yum install git -y
 
 if [ $? -ne 0 ]
 then    
@@ -21,7 +21,7 @@ else
 fi        
 
 
-apt install mysql-server -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then    
