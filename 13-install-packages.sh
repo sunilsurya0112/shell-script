@@ -26,11 +26,11 @@ VALIDATE(){
 
 if [ $ID -ne 0 ]
 then 
-    echo -e " $R you are not root user"
+    echo -e " $R you are not root user$N"
     exit 1
 
 else
-    echo -e "$G you are root user"
+    echo -e "$G you are root user$N"
 fi
 #echo "All arguments passed: $@"
 # git mysql postfix net-tools
